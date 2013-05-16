@@ -160,7 +160,13 @@ static const struct luaL_Reg bit_funcs[] = {
 */
 #define BAD_SAR		(bsar(-8, 2) != (SBits)-2)
 
-LUALIB_API int luaopen_plugin_bit(lua_State *L)
+#if ( defined( _WIN32 ) || defined( _WIN64 ) )
+#	define DLL_EXPORT	__declspec( dllexport )
+#else
+#	define DLL_EXPORT
+#endif
+
+LUALIB_API DLL_EXPORT int luaopen_plugin_bit(lua_State *L)
 {
   UBits b;
   lua_pushnumber(L, (lua_Number)1437217655L);
