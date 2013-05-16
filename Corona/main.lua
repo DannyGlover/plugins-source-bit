@@ -88,20 +88,18 @@ check_shift("ror", 302316761)
 
 check_binop_range("tohex", 47880306, -8, 8)
 
-assert( bit.bnot(0x12345678) == 0xedcba987 )
-assert( bit.bor(1, 2, 4, 8) == 15 )
-assert( bit.band(0x12345678, 0xff) == 0x00000078 )
-assert( bit.bxor(0xa5a5f0f0, 0xaa55ff00) == 0x0ff00ff0 )
+assert( bit.bor( 1, 2, 4, 8 ) == 15 )
+assert( bit.band( 0x12345678, 0xff ) == 0x00000078 )
+assert( bit.bxor( 0xa5a5f0f0, 0xaa55ff00 ) == 0x0ff00ff0 )
 
-assert( bit.lshift(1, 8) == 256 )
-assert( bit.lshift(0x87654321, 12) == 0x54321000 )
-assert( bit.rshift(0x87654321, 12) == 0x00087654 )
-assert( bit.arshift(0x87654321, 12) == 0xfff87654 )
+assert( bit.lshift( 1, 8 ) == 256 )
+assert( bit.lshift( 0x87654321, 12 ) == 0x54321000 )
+assert( bit.rshift( 0x87654321, 12 ) == 0x00087654 )
 
-assert( bit.rol(0x12345678, 12) == 0x45678123 )
-assert( bit.ror(0x12345678, 12) == 0x67812345 )
+assert( bit.rol( 0x12345678, 12 ) == 0x45678123 )
+assert( bit.ror( 0x12345678, 12 ) == 0x67812345 )
 
-assert( bit.bswap(0x12345678) == 0x78563412 )
-assert( bit.bswap(0x78563412) == 0x12345678 )
+assert( bit.bswap( 0x12345678 ) == 0x78563412 )
+assert( bit.bswap( 0x78563412 ) == 0x12345678 )
 
 print( "Bit sample done." )
