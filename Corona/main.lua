@@ -5,7 +5,7 @@
 
 print( "Bit sample start." )
 
-local bit = require( "bit" )
+local bit = require( "plugin.bit" )
 
 local vb = {
   0, 1, -1, 2, -2, 0x12345678, 0x87654321,
