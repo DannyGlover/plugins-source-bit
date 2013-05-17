@@ -36,6 +36,10 @@ settings =
 	{
 		-- key is the name passed to Lua's 'require()'
 		["plugin.bit"] =
+		{
+			-- required
+			publisherId = "com.coronalabs",
+		},
 	},		
 }
 ``````
