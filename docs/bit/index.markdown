@@ -11,11 +11,18 @@
 
 ## Overview
 
-The plugin provides access to Mike Pall's BitOp library
-
-[Lua BitOp](http://bitop.luajit.org)
+The plugin provides access to Mike Pall's BitOp library [Lua BitOp](http://bitop.luajit.org)
 
 BitOp's documentation is available from [bitop.luajit.org](http://bitop.luajit.org/api.html)
+
+## Platforms
+
+The following platforms are supported:
+
+* Android
+* iOS
+* Mac
+* Windows
 
 ## Syntax
 
