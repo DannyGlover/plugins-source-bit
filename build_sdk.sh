@@ -75,8 +75,14 @@ cd "$path/ios"
 	# Remove i386 from ios build
 	find "$OUTPUT_DIR_IOS" -name \*.a | xargs -n 1 -I % lipo -remove i386 % -output %
 
+	# Remove x86_64 from ios build
+	find "$OUTPUT_DIR_IOS" -name \*.a | xargs -n 1 -I % lipo -remove x86_64 % -output %
+
 	# Remove armv7 from ios-sim build
 	find "$OUTPUT_DIR_IOS_SIM" -name \*.a | xargs -n 1 -I % lipo -remove armv7 % -output %
+
+	# Remove arm64 from ios-sim build
+	find "$OUTPUT_DIR_IOS_SIM" -name \*.a | xargs -n 1 -I % lipo -remove arm64 % -output %
 cd -
 
 echo "------------------------------------------------------------------------"
@@ -85,14 +91,14 @@ cd "$path/mac"
 	./build.sh "$OUTPUT_DIR_MAC" $PLUGIN_NAME
 cd -
 
-echo "------------------------------------------------------------------------"
-echo "[android]"
-cd "$path/android"
-	export OUTPUT_PLUGIN_DIR_ANDROID="$OUTPUT_DIR_ANDROID"
-	# The parameters of this build.sh are optional.
-	./build.sh
-	cp -v libs/armeabi-v7a/* "$OUTPUT_DIR_ANDROID"
-cd -
+#echo "------------------------------------------------------------------------"
+#echo "[android]"
+#cd "$path/android"
+#	export OUTPUT_PLUGIN_DIR_ANDROID="$OUTPUT_DIR_ANDROID"
+#	# The parameters of this build.sh are optional.
+#	./build.sh
+#	cp -v libs/armeabi-v7a/* "$OUTPUT_DIR_ANDROID"
+#cd -
 
 echo "------------------------------------------------------------------------"
 echo "[docs]"
