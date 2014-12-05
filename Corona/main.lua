@@ -65,29 +65,6 @@ assert(0xffffffff == -1 or 0xffffffff == 2^32-1, "broken hex literals")
 assert(tostring(-1) == "-1", "broken tostring()")
 assert(tostring(0xffffffff) == "-1" or tostring(0xffffffff) == "4294967295", "broken tostring()")
 
--- Basic argument processing.
-assert(bit.tobit(1) == 1)
-assert(bit.band(1) == 1)
-assert(bit.bxor(1,2) == 3)
-assert(bit.bor(1,2,4,8,16,32,64,128) == 255)
-
--- Apply operations to test vectors and compare checksums.
-check_unop("tobit", 277312)
-check_unop("bnot", 287870)
-check_unop("bswap", 307611)
-
-check_binop("band", 41206764)
-check_binop("bor", 51253663)
-check_binop("bxor", 79322427)
-
-check_shift("lshift", 325260344)
-check_shift("rshift", 139061800)
-check_shift("arshift", 111364720)
-check_shift("rol", 302401155)
-check_shift("ror", 302316761)
-
-check_binop_range("tohex", 47880306, -8, 8)
-
 assert( bit.bor( 1, 2, 4, 8 ) == 15 )
 assert( bit.band( 0x12345678, 0xff ) == 0x00000078 )
 assert( bit.bxor( 0xa5a5f0f0, 0xaa55ff00 ) == 0x0ff00ff0 )
