@@ -57,3 +57,7 @@ android/assets/*
 android/obj/*
 win32/**/Debug/*
 win32/**/Release/*
+
+# Git repo files
+.git
+.gitignore
