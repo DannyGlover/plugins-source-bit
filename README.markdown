@@ -22,4 +22,4 @@ Install [CoronaEnterprise](http://coronalabs.com/products/enterprise/).
 * [Corona Enterprise](http://docs.coronalabs.com/native/)
 * [API Reference](http://bitop.luajit.org/api.html)
 * [Project Settings](http://docs.coronalabs.com/plugin/bit/)
-* [Sample Code](GIT_URL/samples)
+* [Sample Code](https://github.com/coronalabs/plugins-sample-bit)
